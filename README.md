@@ -11,6 +11,16 @@ Web application consists of five pages:
 4. Page that shows all metrics, collected by the filter.
 5. Page that shows random number (between 1 to 100) of "Lorem ipsum" text with random (0-10 seconds) delay.
 
+## Dependencies
+The application uses servlet filter Maven package https://github.com/AnatolyevPavel/webmetrics/packages/417488. To build the application one must add Github personal token with read:packages permission to `~/.m2/settings.xml` file to server `gihub-packages` because Github does not allow anonymous package download during Maven builds:
+```
+    <server>
+      <id>github-packages</id>
+      <username>YOUR_USERNAME</username>
+      <password>YOUR_GITHUB_PERSONAL_TOKEN</password>
+    </server>
+```
+
 ## Building application
 Run `mvn clean package` to build and package the web application.
 
