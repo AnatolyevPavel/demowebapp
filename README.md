@@ -1,4 +1,4 @@
-# Sample web application ![Travis CI status](https://travis-ci.com/AnatolyevPavel/demowebapp.svg?branch=master)
+# Sample web application [![Travis CI status](https://travis-ci.com/AnatolyevPavel/demowebapp.svg?branch=master)](https://travis-ci.com/github/AnatolyevPavel/demowebapp)
 Sample Spring Boot web application to test a [servlet filter](https://github.com/AnatolyevPavel/webmetrics) that gathers the following metrics:
 * Request Time: time spent between when the application starts to process the request and the time when the application sends the response to the client.
 * Response Sizes: the size of the HTTP response body in bytes.
