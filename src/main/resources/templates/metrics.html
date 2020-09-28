@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Metrics summary</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<h1>Metrics summary</h1>
+<p>
+    Minimum request processing time:
+    <th:block th:text="${minimumTime}">0</th:block>
+    μs <br/>
+    Average request processing time:
+    <th:block th:text="${averageTime}">0</th:block>
+    μs <br/>
+    Maximum request processing time:
+    <th:block th:text="${maximumTime}">0</th:block>
+    μs <br/>
+    Minimum response size:
+    <th:block th:text="${minimumSize}">0</th:block>
+    bytes <br/>
+    Average response size:
+    <th:block th:text="${averageSize}">0</th:block>
+    bytes <br/>
+    Maximum response size:
+    <th:block th:text="${maximumSize}">0</th:block>
+    bytes <br/>
+</p>
+<br/>
+<a href="/">Go Home</a>
+</body>
+</html>

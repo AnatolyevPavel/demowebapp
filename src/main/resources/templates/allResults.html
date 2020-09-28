@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All results</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th> ID </th>
+        <th> Processing time (μs) </th>
+        <th> Response size (bytes) </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${results.isEmpty()}">
+        <td colspan="2"> No results available </td>
+    </tr>
+    <tr th:each="result : ${results}">
+        <td><span th:text="${result.id}"> ID </span></td>
+        <td><span th:text="${result.processingTime}"> Processing time </span></td>
+        <td><span th:text="${result.responseSize}"> Response size </span></td>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<a href="/">Go Home</a>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Random page</title>
+</head>
+<body>
+<th:block th:each="result : ${results}">
+    <p th:text="${result}">Text</p>
+</th:block>
+
+<br/>
+<a href="/">Go Home</a>
+</body>
+</html>

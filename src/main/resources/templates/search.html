@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search metric results</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<h1>Search results</h1>
+<form th:action="@{/search}" th:object="${searchForm}" method="post">
+    <p>ID: <input class="input400" type="text" th:field="*{id}"/></p>
+    <p><input  type="submit" value="Search"/></p>
+</form>
+
+<p  th:if="${showNoSearchResult}">No results available</p>
+<table  th:if="${hasData}">
+    <thead>
+    <tr>
+        <th> ID </th>
+        <th> Processing time (μs) </th>
+        <th> Response size (bytes) </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><span th:text="${result.id}"> ID </span></td>
+        <td><span th:text="${result.processingTime}"> Processing time </span></td>
+        <td><span th:text="${result.responseSize}"> Response size </span></td>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<a href="/">Go Home</a>
+</body>
+</html>
