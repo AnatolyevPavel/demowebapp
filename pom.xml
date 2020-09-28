@@ -69,18 +69,18 @@
     </build>
 
     <repositories>
-    <repository>
-        <id>pavel-anatolyev-testrepository</id>
-        <url>
-            https://packagecloud.io/PavelAnatolyev/testrepository/maven2
-        </url>
-        <releases>
-            <enabled>true</enabled>
-        </releases>
-        <snapshots>
-            <enabled>true</enabled>
-        </snapshots>
-    </repository>
+        <repository>
+            <id>github-packages</id>
+            <url>
+                https://maven.pkg.github.com/AnatolyevPavel/webmetrics
+            </url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
     </repositories>
 
 </project>
